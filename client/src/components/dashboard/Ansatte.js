@@ -43,7 +43,7 @@ const Ansatte = () => {
 
     return (<div>
         <div className="flex-container">
-       
+            <p>Her velger du ansatte som skal ha hvilke kurs.</p>
         {currentCompany != null ?
             currentCompany.ansatte.map(user => (
                 <div key={user.user._id}>

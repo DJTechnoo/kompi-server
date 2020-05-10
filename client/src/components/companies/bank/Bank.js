@@ -79,6 +79,8 @@ const Bank = () => {
 
     return (
     <div><div>
+        <p>Her får du oversikt over all kompetansene i bedriften.</p>
+        <p>Her kan du velge ansatte som settes på en oppgave.</p>
         {graphData.length > 0 ? (
             <VictoryChart domainPadding={20}>
                 <VictoryBar

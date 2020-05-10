@@ -20,6 +20,7 @@ const CompanyCourseTab = () => {
 
     return (   
         <Fragment>
+            <p>Her lager du kurs, og ser hvilke kurs som finnes.</p>
             <button onClick={clickHandler}>Nytt kurs</button>
             {showForm ? <CourseCreate/> : null}
             <Courses case="owner"/>
