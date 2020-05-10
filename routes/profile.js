@@ -66,7 +66,7 @@ router.put("/completecourse/:id", auth, async (req, res) => {
         await competencies.save();
         let res2 = await Profile.findOneAndUpdate(
             {user: req.user.id},
-           { $pull: { 'currentCourses': {  _id: req.params.id } }});
+           { $pull: { 'currentCourses': {  _id: req.params.id } }}).populate("tasks.task");
         res.json(res2);
 
     } catch (err) {
