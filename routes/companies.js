@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const auth = require('../middleware/auth');
-
 const Company = require('../models/Company');
 const Profile = require('../models/Profile');
 const User = require('../models/User');
@@ -11,6 +10,7 @@ const mongoose = require('mongoose'); // for ObjectId
 // @router      GET api/companies
 // @desc        Get all companies
 // @access      Private
+
 router.get('/', auth, 
 
     
@@ -29,9 +29,11 @@ try {
 
 });
 
+
 // @router      GET api/companies/mine
 // @desc        Get companies owned by logged in user
 // @access      Private
+
 router.get('/mine', auth, 
 
     
@@ -55,6 +57,7 @@ router.get('/mine', auth,
 // @router      GET api/companies/mine/:id
 // @desc        Get SPECIFIC owned Company by logged in user
 // @access      Private
+
 router.get('/mine/:id', auth, 
 
     
@@ -82,6 +85,7 @@ router.get('/mine/:id', auth,
 // @router      GET api/companies/profile/:id
 // @desc        Get PROFILE of Company
 // @access      Private
+
 router.get('/profile/:id', auth, 
 
     
@@ -106,6 +110,7 @@ router.get('/profile/:id', auth,
 // @router      GET api/companies/mine/bank/:id
 // @desc        Get Skillbank of selected company
 // @access      Private
+
 router.get('/mine/bank/:id', auth,
 
     
@@ -131,7 +136,8 @@ router.get('/mine/bank/:id', auth,
 
 // @router      GET api/companies/mine/bank/:id/:skill
 // @desc        Get Skillbank of selected company
-// @access      Private                     
+// @access      Private   
+
 router.get('/mine/bank/:id/:skill', auth,
 
     
@@ -179,12 +185,10 @@ router.get('/mine/bank/:id/:skill', auth,
 });
 
 
-
-
-
 // @router      GET api/companies/:companyName
 // @desc        Get company by name
 // @access      Private
+
 router.get('/:companyName', auth, 
 
     
@@ -206,10 +210,10 @@ router.get('/:companyName', auth,
 });
 
 
-
 // @router      Post api/companies
 // @desc        Create a company
 // @access      Private
+
 router.post('/', auth, 
     
 async (req, res) => {

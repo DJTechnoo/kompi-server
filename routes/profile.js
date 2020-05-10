@@ -4,8 +4,10 @@ const auth = require('../middleware/auth');
 const Profile = require("../models/Profile");
 const mongoose = require('mongoose'); // for ObjectId 
 
-// @route   GET api/profile/me
-// @desc    get logged in users profile
+
+
+// @route   GET api/profile/completecourse/:id
+// @desc    Complete a course and achieve competencies.
 // @access  private
 
 router.put("/completecourse/:id", auth, async (req, res) => {
@@ -92,6 +94,8 @@ router.put("/task/:taskId", auth, async (req, res) => {
         res.status(500).send("server error");
     }
 });
+
+
 
 // @route   GET api/profile/me
 // @desc    get logged in users profile
@@ -208,6 +212,10 @@ router.get("/user/:id", async (req, res) => {
 });
 
 
+// @route   GET api/profile/competency/:userID/:skill
+// @desc    Gets list of competencies of that skill and user
+// @access  private
+
 router.get("/competency/:userID/:skill", auth, async (req, res) => {
     try {
         const profile = await Profile.aggregate([
@@ -242,7 +250,10 @@ router.get("/competency/:userID/:skill", auth, async (req, res) => {
     }
 
 });
-// @route       PUT api/profile/remove/:id
+
+
+
+// @route       PUT api/profile/removetask/:id
 // @desc        Removes a task from the profile
 // @access      Private
 

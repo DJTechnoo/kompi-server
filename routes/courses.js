@@ -4,9 +4,12 @@ const auth = require('../middleware/auth');
 const Course = require("../models/Courses");
 const Profile = require("../models/Profile");
 
+
+
 // @router      GET api/courses/:courseID
 // @desc        Get course by ID
 // @access      Private
+
 router.get('/:id', auth, 
 
     
@@ -61,7 +64,6 @@ router.post("/", auth,  async (req, res) =>{
 // @desc    Get all courses
 // @access  public
 
-
 router.get("/", async (req, res) => {
     try {
         const courses = await Course.find();
@@ -77,6 +79,7 @@ router.get("/", async (req, res) => {
 // @router      GET api/courses/company/:id
 // @desc        Get ALL courses in specific company
 // @access      Private
+
 router.get('/company/:id', auth, 
 
     async (req, res) => {
@@ -94,6 +97,7 @@ router.get('/company/:id', auth,
 // @router      POST api/courses/assign/:userID
 // @desc        Assign a course to a user profile
 // @access      Private
+
 router.post('/assign/:userID', auth,  
 
     async (req, res) => {
@@ -117,6 +121,10 @@ router.post('/assign/:userID', auth,
     }
 });
 
+
+// @router  POST api/courses/take/:courseID
+// @desc    The course gets sent to the logged in user
+// @acces   private
 
 router.post('/take/:courseID', auth,  
 

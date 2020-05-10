@@ -44,33 +44,8 @@ router.post('/skillify/:id', auth,
                         return existingSkill;    
                     }
                 })
-                );
+            );
                 
-                
-                /*  let response = null;
-                
-                for(let i = 0; i < reqSkill.length; i++){
-                let existingSkill = await Skill.findOne({company: company._id, skill: reqSkill[i]});
-
-                if(!existingSkill){
-
-                    console.log(reqSkill[i] + " does not exist. Adding to company");
-                    const newSkill = new Skill( {
-                        skill: reqSkill[i],
-                        company: company._id,
-                        employees: [req.user.id] // adds logged in user
-                        });
-                    
-                    response = await newSkill.save();
-                }
-                
-                
-                else {
-                    console.log(reqSkill[i] + " does exist! Adding user to skill list");
-                    existingSkill.employees.addToSet(req.user.id);
-                    response = await existingSkill.save(); 
-                    
-                }*/
     
             
             res.json(resp);
