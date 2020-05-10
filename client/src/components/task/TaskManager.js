@@ -26,7 +26,7 @@ const TaskManager = (props) => {
 }
 
 TaskManager.propTypes = {
-    task : PropTypes.object
+    task : PropTypes.array
 }
 
 export default TaskManager;
