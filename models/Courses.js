@@ -18,10 +18,6 @@ const CourseSchema = mongoose.Schema({
         type: String
     },
 
-    skills: {
-        type: [String]
-    },
-
     competencies : [
         {
             skill: {type: String},
