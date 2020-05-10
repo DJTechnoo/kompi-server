@@ -17,6 +17,7 @@ const Dashboard = () => {
     
     useEffect(() => {
         getCurrentProfile();
+        console.log("Profile Runs");
         // eslint-disable-next-line
     }, []);  
     

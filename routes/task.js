@@ -19,7 +19,8 @@ router.post("/", auth,  async (req, res) =>{
     taskFields.taskName = taskName;
     taskFields.company = company;
     taskFields.description = description;
-    taskFields.date = date;    
+    taskFields.date = date;
+    taskFields.status = "klar";    
 
     try {   
         // create task

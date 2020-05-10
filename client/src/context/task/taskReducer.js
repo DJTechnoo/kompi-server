@@ -22,7 +22,7 @@ export default (state, action) => {
         case ADD_TASK:
             return {
                 ...state,
-                task: action.payload
+                tasks: [[...state.tasks], action.payload]
             }
         default:
             return state;

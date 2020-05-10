@@ -11,10 +11,10 @@ const CompanyTaskTab = (props) => {
     const companyContext = useContext(CompanyContext);
     const {getCompanyTasks} = taskContext;
 
-    useEffect(() => {
+    /*useEffect(() => {
         getCompanyTasks(companyContext.currentCompany._id);
         // eslint-disable-next-line
-    }, []);
+    }, []);*/
     
     return (   
         <Fragment>

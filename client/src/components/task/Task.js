@@ -13,7 +13,7 @@ const Tasks = (props) => {
         // eslint-disable-next-line
     }, [companyContext.currentCompany]); 
 
-    return (  
+    return (   
         <Fragment>
             <h1 className="text-left">Oppgaver: </h1>
             <div className="flex-container">

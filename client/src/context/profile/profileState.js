@@ -147,13 +147,9 @@ const ProfileState = props => {
     //REMOVE_TASK
 
     const removeTaskFromProfile = async (id) => {
-        const config = {
-            headers: {
-                "Content-Type": "application/json"
-            }
-        };
+        
         try {
-            const res = await axios.put(`/api/profile/removetask/${id}`, config);
+            const res = await axios.put(`/api/profile/removetask/${id}`);
             dispatch({
                 type: REMOVE_TASK_FROM_PROFILE,
                 payload: res.data
