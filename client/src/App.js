@@ -4,10 +4,8 @@ import Navbar from './components/layout/Navbar';
 
 // Pages
 import Home from './components/pages/Home';
-import About from './components/pages/About';
-import Profile from './components/pages/Profile';
 import CreateCompany from './components/pages/CreateCompany';
-import Dashboard from './components/dashboard/Dashboard';
+import Dashboard from './components/profile/Dashboard';
 import ProfileCreate from './components/pages/ProfileCreate';
 import CompanyLists from './components/companies/CompanyLists';
 import CompanyDashboard from './components/dashboard/CompanyDashboard';
@@ -51,10 +49,8 @@ const App = () => {
             <PrivateRoute exact path="/company-dashboard" component={CompanyDashboard}/>
             <PrivateRoute exact path="/company-profile" component={CompanyProfile}/>
             <Route exact path="/profile/:user" component={ShowProfile}/>
-            <Route exact path="/about" component={About}/>
             <Route exact path="/register" component={Register}/>
             <Route exact path="/login" component={Login}/>
-            <Route exact path="/me" component={Profile}/>
           </Switch>
         </div>
       </div>
