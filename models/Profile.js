@@ -22,9 +22,6 @@ const ProfileSchema = mongoose.Schema({
         type: String
     },
 
-    skills: {
-        type: [String]
-    },
 
     competencies: [
         {
@@ -33,9 +30,6 @@ const ProfileSchema = mongoose.Schema({
         }
     ],
 
-    experiences: {
-        type: [String]
-    },
 
     title: {
         type: String

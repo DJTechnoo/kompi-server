@@ -6,12 +6,10 @@ const ProfileCreate = () => {
     const history = useHistory();
     const [ profile, setProfile] = useState({
         bio: '',
-        skills: '',
-        experiences: '',
         title: ''
     });
 
-    const { bio, skills, title, experiences } = profile;
+    const { bio, title } = profile;
 
     const onChange = e => setProfile({ ...profile, [e.target.name]: e.target.value });
     const profileContext = useContext(ProfileContext);
@@ -20,7 +18,7 @@ const ProfileCreate = () => {
     const onSubmitHandler = (e) => {
         e.preventDefault();
         profileContext.createProfile(
-            {bio, skills, title, experiences}
+            {bio, title}
         );
         history.push("dashboard");
     }
@@ -35,20 +33,7 @@ const ProfileCreate = () => {
                     value={profile.bio}
                     placeholder="Beskriv deg selv..."
                 />
-                <input 
-                    type="text" 
-                    name="skills" 
-                    onChange={onChange}
-                    value={profile.skills}
-                    placeholder="Dine kompetanser adskilt med komma (,)..."
-                />
-                <input 
-                    type="text" 
-                    name="experiences" 
-                    onChange={onChange}
-                    value={profile.experiences}
-                    placeholder="Dine jobb-erfaringer adskilt med komma (,)..."
-                />
+                
                 <input 
                     type="text" 
                     name="title" 

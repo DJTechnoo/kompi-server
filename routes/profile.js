@@ -149,13 +149,11 @@ router.get("/me/companies", auth, async (req, res) => {
 // @access  private
 
 router.post("/", auth,  async (req, res) =>{
-    const {bio,skills, experiences, title} = req.body;
+    const {bio, title} = req.body;
     const profileFields = {};
     profileFields.user = req.user.id;
     profileFields.bio = bio;
     profileFields.title = title;
-    profileFields.skills = skills.split(',').map(skill => skill.trim());
-    profileFields.experiences = experiences.split(',').map(experience => experience.trim());
     
     try {
         let profile = await Profile.findOne({user: req.user.id});

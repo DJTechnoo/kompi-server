@@ -47,6 +47,7 @@ const Dashboard = () => {
                         <p><i className="fa fa-envelope fa-fw text-primary"></i> {user && user.email} </p>
                         <h4>Bio</h4>
                         <p> {profile && profile.bio} </p>
+                        <h6>Kontoen din ble opprettet:   {user && user.date} </h6>
                         </div>
                     </div>
 
@@ -61,7 +62,7 @@ const Dashboard = () => {
                         <button onClick={sendCompetencies}>Send kompetanser</button>
                     </div>
                    
-                    <p>Kontoen din ble opprettet:   {user && user.date} </p>
+                    
                     
                     <div>
                         {profile.currentCourses.length > 0 ?
