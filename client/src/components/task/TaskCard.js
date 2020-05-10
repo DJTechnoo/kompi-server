@@ -1,8 +1,9 @@
 import React , {useState, useContext}  from 'react';
 import TaskContext from '../../context/task/taskContext';
+import { PromiseProvider } from 'mongoose';
 
 
-const TaskCard = ({title, text, date, status, click, buttonName, children, id, arg}) => {
+const TaskCard = ({title, text, date, status, click, buttonName, children, id, arg, team}) => {
     const taskContext = useContext(TaskContext);
     const {updateTaskStatus} = taskContext;
 
@@ -32,6 +33,8 @@ const TaskCard = ({title, text, date, status, click, buttonName, children, id, a
         <div className="card bg-light half rounded">
         <h3>{title}</h3>
         <p>{text}</p>
+        <h4>Team</h4>
+            {team.map((member, i) => (<p key={i}>{member}</p>))}
         <h5>{date}</h5>
         <h5>{status}</h5>
         <form onSubmit={onSubmitHandler}>

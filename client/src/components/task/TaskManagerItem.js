@@ -18,6 +18,7 @@ const TaskManagerItem = (props) => {
             text={"Beskrivelse: " + props.task.description}
             date={"Dato: " + props.task.date}
             status={"Status: " + props.task.status}
+            team={props.task.employees}
             id={props.task._id}
             arg={{name: props.task.taskName, id: props.task._id}}
             buttonName="Fjern"
