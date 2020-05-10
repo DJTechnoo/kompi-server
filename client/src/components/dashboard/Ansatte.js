@@ -17,7 +17,6 @@ const Ansatte = () => {
     const [selectedEmployees, setSelectedEmployees] = useState([]);  // For selecting
     const [selectedCourses, setSelectedCourses] = useState([]); // for selecting
     const {currentCompany} = companyContext;
-    const {addEmployee} = taskContext;
 
     useEffect(() => {
        // getBank();

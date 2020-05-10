@@ -5,7 +5,6 @@ import courseReducer from './courseReducer';
 import {
     ADD_COURSE,
     GET_COMPANY_COURSES,
-    ASSERT,
     ERR_COURSE
     
 } from '../types';

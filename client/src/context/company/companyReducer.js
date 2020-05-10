@@ -89,7 +89,6 @@ export default (state, action) => {
         case ADD_COMPANY:
             return {
                 ...state,
-             //   companies : [...state.companies, action.payload],
                 loading: false
             };
         default:

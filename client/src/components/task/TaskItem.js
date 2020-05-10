@@ -1,5 +1,4 @@
-import React, {useContext} from 'react';
-import { useHistory } from 'react-router-dom';
+import React from 'react';
 import Card from '../UI/Card';
 
 const TaskItem = (props) => {

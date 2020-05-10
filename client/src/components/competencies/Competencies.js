@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Competencies = (props) => {
     return (
@@ -16,6 +17,10 @@ const Competencies = (props) => {
             })}
         </div>
     );
+}
+
+Competencies.propTypes = {
+    competencies : PropTypes.arrayOf(PropTypes.object)
 }
 
 export default Competencies;

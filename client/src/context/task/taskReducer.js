@@ -1,8 +1,5 @@
 import {
     ADD_TASK,
-    UPDATE_TASK_STATUS,
-    FINISH_TASK,
-    DELETE_TASK,
     GET_TASK,
     GET_COMPANY_TASKS,
     GET_USER_TASKS,
@@ -22,7 +19,7 @@ export default (state, action) => {
         case ADD_TASK:
             return {
                 ...state,
-                tasks: [[...state.tasks], action.payload]
+                tasks: [...state.tasks, action.payload]
             }
         default:
             return state;

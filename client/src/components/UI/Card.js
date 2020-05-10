@@ -1,5 +1,4 @@
 import React from 'react';
-import { USER_LOADED } from '../../context/types';
 
 const Card = ({title, text, click, buttonName, children, arg, date, status}) => {
 

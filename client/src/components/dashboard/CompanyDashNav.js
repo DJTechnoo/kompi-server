@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import {Link} from 'react-router-dom';
 
 
-const CompanyDashNav = (props) => {
+const CompanyDashNav = () => {
     
 
     const guestLinks = (

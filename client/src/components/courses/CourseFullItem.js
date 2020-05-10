@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const CourseFullItem = (props) => {
 
@@ -23,6 +24,13 @@ const CourseFullItem = (props) => {
         ): null}
 
     </div>);
+}
+
+CourseFullItem.propTypes = {
+    course : PropTypes.object,
+    buttonClick : PropTypes.func,
+    buttonName : PropTypes.string,
+    arg : PropTypes.object
 }
 
 export default CourseFullItem;

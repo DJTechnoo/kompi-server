@@ -1,6 +1,6 @@
 import React , {useState, useContext}  from 'react';
 import TaskContext from '../../context/task/taskContext';
-import { PromiseProvider } from 'mongoose';
+import PropTypes from 'prop-types';
 
 
 const TaskCard = ({title, text, date, status, click, buttonName, children, id, arg, team}) => {
@@ -13,13 +13,10 @@ const TaskCard = ({title, text, date, status, click, buttonName, children, id, a
         newStatus: ''
     });
 
-    const {newStatus} = body;
-
 
     const onSubmitHandler = (e) => {
        e.preventDefault();
         updateTaskStatus(id,body.newStatus);
-        console.log(id,body.newStatus);
     }
 
     const clickHandler = () => {
@@ -54,6 +51,15 @@ const TaskCard = ({title, text, date, status, click, buttonName, children, id, a
         </div>
         
     )
+}
+
+TaskCard.propTypes = {
+    title : PropTypes.string,
+    text : PropTypes.string,
+    status : PropTypes.string,
+    click : PropTypes.func,
+    buttonName : PropTypes.string,
+    team : PropTypes.arrayOf(PropTypes.string)
 }
 
 export default TaskCard;

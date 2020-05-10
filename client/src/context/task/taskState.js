@@ -9,7 +9,6 @@ import {
     FINISH_TASK,
     GET_COMPANY_TASKS,
     GET_USER_TASKS,
-    ADD_EMPLOYEE,
     ERR_TASK
 } from '../types';
 

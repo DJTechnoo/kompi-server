@@ -1,7 +1,6 @@
 import {
     ADD_COURSE,
-    GET_COMPANY_COURSES,
-    ERR_COURSE
+    GET_COMPANY_COURSES
 } from '../types';
 
 export default (state, action) => {

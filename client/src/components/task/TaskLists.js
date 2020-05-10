@@ -1,7 +1,5 @@
-import React, {useContext, useEffect} from 'react';
-import TaskCreate from '../task/TaskCreate';
-import TaskContext from '../../context/task/taskContext';
-import CompanyContext from '../../context/company/companyContext';
+import React from 'react';
+import Task from './Task';
 
 const TaskLists = () => {
     return (
@@ -10,4 +8,4 @@ const TaskLists = () => {
             </div>)
 }
 
-export default Task;
+export default TaskLists;

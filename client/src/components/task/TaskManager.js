@@ -1,5 +1,6 @@
-import React, {Fragment, useEffect} from 'react';
+import React, {Fragment} from 'react';
 import TaskManagerItem from '../../components/task/TaskManagerItem';
+import PropTypes from 'prop-types'; 
 
 const TaskManager = (props) => { 
 
@@ -22,6 +23,10 @@ const TaskManager = (props) => {
         </div>
     </Fragment>
     );
+}
+
+TaskManager.propTypes = {
+    task : PropTypes.object
 }
 
 export default TaskManager;

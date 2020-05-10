@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import TaskCard from './TaskCard';
 import ProfileContext from '../../context/profile/profileContext';
+import PropTypes from 'prop-types';
 
 
 const TaskManagerItem = (props) => {
@@ -26,5 +27,9 @@ const TaskManagerItem = (props) => {
         />
     )
 };
+
+TaskManagerItem.propTypes = {
+    task : PropTypes.object
+}
 
 export default TaskManagerItem;

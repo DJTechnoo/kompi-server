@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ProfileLink = props => {
 
@@ -12,6 +13,10 @@ const ProfileLink = props => {
             {props.children}
         </div>
     );
+}
+
+ProfileLink.propTypes = {
+    user : PropTypes.object
 }
 
 export default ProfileLink;

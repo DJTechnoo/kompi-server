@@ -1,13 +1,12 @@
-import React, {useContext, useEffect} from 'react';
-import CourseCreate from '../courses/CourseCreate';
-import CourseContext from '../../context/course/courseContext';
-import CompanyContext from '../../context/company/companyContext';
+import React from 'react';
+import Courses from './Courses';
+
 
 const CourseLists = () => {
     return (
             <div>
-                <Course case="owner"/>
+                <Courses case="owner"/>
             </div>)
 }
 
-export default Course;
+export default CourseLists;

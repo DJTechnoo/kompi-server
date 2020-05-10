@@ -2,6 +2,8 @@ import React, {Fragment, useContext, useEffect} from 'react';
 import CourseContext from '../../context/course/courseContext';
 import CourseItem from '../../components/courses/CourseItem';
 import CompanyContext from '../../context/company/companyContext';
+import PropTypes from 'prop-types';
+
 
 const Courses = (props) => { 
     const courseContext = useContext(CourseContext);
@@ -29,6 +31,12 @@ const Courses = (props) => {
             </div>
         </Fragment>
     );
+}
+
+Courses.propTypes = {
+    case : PropTypes.string,
+    buttonName : PropTypes.string,
+    click : PropTypes.func
 }
 
 export default Courses;
