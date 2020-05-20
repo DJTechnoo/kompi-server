@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 const CompanyDashNav = () => {
     
 
-    const guestLinks = (
+    const links = (
         <Fragment>
             <li>
                 <Link to="/ansatte">Ansatte</Link>
@@ -26,7 +26,7 @@ const CompanyDashNav = () => {
         
         <div className="navbar bg-primary">
             <ul>
-                {guestLinks}
+                {links}
             </ul>
        </div>
     )

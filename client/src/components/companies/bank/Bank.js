@@ -58,15 +58,18 @@ const Bank = () => {
     }
 
     const updateSelectedTask = task => {
-        console.log(task);
         setSelectedTask(task);
     }
 
-    const updateCurrentSkill = skill => {
-        
+
+    // Used to show competencies of a skill category.
+
+    const updateCurrentSkill = skill => {  
         setCurrentSkill(skill);
     }
 
+
+    // Selected employees is assigned the selected task
     const assertTask = () => {
         let employeeNames = selected.map(a => a.name);
         let employeeIDs = selected.map(a => a.id);

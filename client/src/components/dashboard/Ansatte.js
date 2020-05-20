@@ -16,6 +16,10 @@ const Ansatte = () => {
     const [selectedCourses, setSelectedCourses] = useState([]); // for selecting
     const {currentCompany} = companyContext;
 
+    /**
+     *  Adds users to the list
+     * @param {object} user has the ID and name.
+     */
 
     const addSelectedEmployees = user => {
         for(let i = 0; i< selectedEmployees.length; i++)
@@ -25,6 +29,11 @@ const Ansatte = () => {
         setSelectedEmployees([...selectedEmployees, user]);
     }
 
+    /**
+     *  Adds courses to the list
+     * @param {object} course has the ID and title.
+     */
+
     const addSelectedCourses = course => {
         for(let i = 0; i< selectedCourses.length; i++)
         if(selectedCourses[i].id === course.id)
@@ -33,6 +42,10 @@ const Ansatte = () => {
         setSelectedCourses([...selectedCourses, course]);
     }
 
+
+    
+     // Adds selected courses to the selected users.
+     
     const assertCourses = () => {
         let employeeIds = selectedEmployees.map(a => a.id);
         let courseIds = selectedCourses.map(a => a.id);

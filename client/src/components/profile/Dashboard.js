@@ -26,6 +26,10 @@ const Dashboard = () => {
     }, []);  
     
 
+    /**
+     * All currently achieved competencies get sent to 
+     * all joined companies.
+    */ 
     const sendCompetencies = () => {
         let skills = profile.competencies.map(a => a.skill);
         let companies = profile.companies.map(a => a.company);

@@ -6,8 +6,10 @@ import CompanyContext from '../../context/company/companyContext';
 
 const Navbar = (props) => {
     const authContext = useContext(AuthContext);
-    const profileContext = useContext(ProfileContext); // Necessary to clear profile
-    const companyContext = useContext(CompanyContext); // to clear on logout
+    // Necessary to clear profile
+    const profileContext = useContext(ProfileContext); 
+    // to clear on logout
+    const companyContext = useContext(CompanyContext); 
 
     const {isAuthenticated, logout, loading, loadUser} = authContext;
     const {clearProfile} = profileContext;
